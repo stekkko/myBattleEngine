@@ -5,12 +5,14 @@ public abstract class Unit {
 
     protected Unit
             (String type
+            , int hitPoints
             , int attack
             , int defence
             , int minDamage
             , int maxDamage
             , float initiative) {
         this.type = type;
+        this.hitPoints = hitPoints;
         this.attack = attack;
         this.defence = defence;
         this.damage = new Damage(minDamage, maxDamage);
@@ -18,6 +20,7 @@ public abstract class Unit {
     }
 
     private String type; //TODO make it Enum rather then String
+    private int hitPoints;
     private int attack;
     private int defence;
     private Damage damage;
@@ -44,6 +47,9 @@ public abstract class Unit {
     // ** Getters
     public String getType() {
         return type;
+    }
+    public int getHitPoints() {
+        return hitPoints;
     }
     public int getAttack() {
         return attack;
