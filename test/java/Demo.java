@@ -1,4 +1,6 @@
 import exceptions.ArmyOutOfBoundsException;
+import units.Angel;
+import units.Unit;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -33,9 +35,19 @@ public class Demo {
             return;
         }
 
-        //tests
-        try {
+        Unit angel = new Angel("Angel", 180, 27, 27, 45, 45, 11);
 
+        // unit tests
+        String type = angel.getType();
+        int atk = angel.getAttack();
+        int def = angel.getDefence();
+        int hp = angel.getHitPoints();
+        Unit.Damage dmg = angel.getDamage();
+        float init = angel.getInitiative();
+
+
+        // army tests
+        try {
 
             String a1s1type = army1.getUnitsStack(0).getType();
             String a2s1type = army2.getUnitsStack(0).getType();
