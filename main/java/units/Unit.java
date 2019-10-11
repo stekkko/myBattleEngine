@@ -28,7 +28,7 @@ public abstract class Unit {
     private Damage damage;
     private float initiative;
 
-    private class Damage {
+    public class Damage {
         private Damage(int minDamage, int maxDamage) {
             this.minDamage = minDamage;
             this.maxDamage = maxDamage;
