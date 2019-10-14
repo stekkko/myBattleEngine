@@ -35,7 +35,7 @@ public class Demo {
             return;
         }
 
-        Unit angel = new Angel("Angel", 180, 27, 27, 45, 45, 11);
+        Unit angel = new Angel();
 
         // unit tests
         String type = angel.getType();
