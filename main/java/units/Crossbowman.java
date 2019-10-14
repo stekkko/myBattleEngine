@@ -1,7 +1,12 @@
 package units;
 
 public class Crossbowman extends Unit {
-    public Crossbowman
+
+    public Crossbowman() {
+        this("People", 10, 4, 4, 2, 8, 8);
+    }
+
+    private Crossbowman
             (String type
             , int hitPoints
             , int attack

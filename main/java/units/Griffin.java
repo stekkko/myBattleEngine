@@ -1,7 +1,11 @@
 package units;
 
 public class Griffin extends Unit {
-    public Griffin
+    public Griffin() {
+        this("Monster", 30, 7, 5, 5, 10, 15);
+    }
+
+    private Griffin
             (String type
                     , int hitPoints
                     , int attack

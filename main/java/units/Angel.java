@@ -1,7 +1,11 @@
 package units;
 
 public class Angel extends Unit{
-    public Angel
+    public Angel() {
+        this("People", 180, 27, 27, 45, 45, 11);
+    }
+
+    private Angel
             (String type
                     , int hitPoints
                     , int attack

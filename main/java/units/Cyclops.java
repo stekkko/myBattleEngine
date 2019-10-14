@@ -1,7 +1,11 @@
 package units;
 
 public class Cyclops extends Unit {
-    public Cyclops
+    public Cyclops() {
+        this("Monster", 85, 20, 15, 18, 26, 10);
+    }
+
+    private Cyclops
             (String type
                     , int hitPoints
                     , int attack

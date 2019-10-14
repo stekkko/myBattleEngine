@@ -1,7 +1,11 @@
 package units;
 
 public class BoneDragon extends Unit {
-    public BoneDragon
+    public BoneDragon() {
+        this("Undead", 150, 27, 28, 15, 30, 11);
+    }
+
+    private BoneDragon
             (String type
                     , int hitPoints
                     , int attack

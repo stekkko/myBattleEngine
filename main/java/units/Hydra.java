@@ -1,7 +1,11 @@
 package units;
 
 public class Hydra extends Unit {
-    public Hydra
+    public Hydra() {
+        this("Monster", 80, 15, 12, 7, 14, 7);
+    }
+
+    private Hydra
             (String type
                     , int hitPoints
                     , int attack

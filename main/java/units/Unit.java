@@ -5,6 +5,8 @@ package units;
  */
 public abstract class Unit {
 
+    protected Unit() {}
+
     protected Unit
             (String type
             , int hitPoints
