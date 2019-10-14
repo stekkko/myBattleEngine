@@ -1,4 +1,5 @@
 import exceptions.ArmyOutOfBoundsException;
+import exceptions.StackOutOfBoundsException;
 import units.Angel;
 import units.Unit;
 
@@ -10,20 +11,24 @@ public class Demo {
         List<UnitsStack> stack1 = new ArrayList<>();
         List<UnitsStack> stack2 = new ArrayList<>();
 
-        // Justice Army
-        stack1.add(new UnitsStack("Crossbowman", 110));
-        stack1.add(new UnitsStack("Angel", 2));
-        stack1.add(new UnitsStack("Shaman", 30));
-        stack1.add(new UnitsStack("Griffin", 12));
-        stack1.add(new UnitsStack("Fury", 56));
-        stack1.add(new UnitsStack("Hydra", 5));
+        try {
+            // Justice Army
+            stack1.add(new UnitsStack("Crossbowman", 110));
+            stack1.add(new UnitsStack("Angel", 2));
+            stack1.add(new UnitsStack("Shaman", 30));
+            stack1.add(new UnitsStack("Griffin", 12));
+            stack1.add(new UnitsStack("Fury", 56));
+            stack1.add(new UnitsStack("Hydra", 5));
 
-        // Evil Army
-        stack2.add(new UnitsStack("BoneDragon", 10));
-        stack2.add(new UnitsStack("Devil", 1));
-        stack2.add(new UnitsStack("Cyclops", 15));
-        stack2.add(new UnitsStack("Lich", 88));
-        stack2.add(new UnitsStack("Skeleton", 356));
+            // Evil Army
+            stack2.add(new UnitsStack("BoneDragon", 10));
+            stack2.add(new UnitsStack("Devil", 1));
+            stack2.add(new UnitsStack("Cyclops", 15));
+            stack2.add(new UnitsStack("Lich", 88));
+            stack2.add(new UnitsStack("Skeleton", 356));
+        } catch (StackOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
 
         Army army1;
         Army army2;
